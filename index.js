@@ -4,8 +4,11 @@ var express = require("express");
 //initialized express  which initializes an express server and puts the initialized server into the variable app
 var app = express();
 
+const cors = require('cors');
+
 //
 app.use(express.json());
+app.use(cors())
 
 const emps = [
   { id: 1, email: "Puja Rai", password: "amitrai" },
@@ -19,6 +22,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/api/login", (req, res) => {
+  
   res.send(emps);
 });
 
