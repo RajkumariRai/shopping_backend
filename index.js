@@ -23,7 +23,9 @@ app.get("/login", (req, res) => {
 
 app.get("/api/login", (req, res) => {
   
-  res.send(emps);
+//  let data =   { id: emps.length+1, email:req.body.email, password: req.body.password}
+//  emps.push(data);
+ res.send(emps)
 });
 
 app.get("/api/login:id", (req, res) => {
